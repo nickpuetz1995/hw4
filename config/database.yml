@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: travels-nwp_production
+  username: travels-nwp
+  password: <%= ENV["TRAVELS-NWP_DATABASE_PASSWORD"] %>
